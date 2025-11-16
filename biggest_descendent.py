@@ -3,7 +3,7 @@ def biggest_descendent(graph, root, value):
 
     def dfs(u):
         best = value[u]
-        for v in graph.out_neighbors(u):
+        for v in graph.neighbors(u):
             child_best = dfs(v)
             if child_best > best:
                 best = child_best
